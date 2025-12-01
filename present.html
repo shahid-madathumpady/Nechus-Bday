@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Present 🎁</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="page">
+
+    <!-- Animations -->
+    <div id="hearts"></div>
+    <div id="balloons"></div>
+    <div id="sparkles"></div>
+    <canvas id="fireworks"></canvas>
+
+    <h1 class="title">🎁 A Special Present for You, Nechu</h1>
+
+    <div class="present-container">
+        <img src="gift-box.png" alt="Gift Box" id="giftBox" class="gift-box">
+        <div class="present-reveal" id="presentReveal">
+            <img src="present.jpg" alt="Present" class="present-img">
+            <p class="fade-text" id="presentText">Something For You When I Come Back To Dubai</p>
+        </div>
+    </div>
+
+    <button class="next-btn" onclick="location.href='index.html'">Back to Start 🔁</button>
+
+    <script src="script.js"></script>
+    <script>
+        const giftBox = document.getElementById("giftBox");
+        const presentReveal = document.getElementById("presentReveal");
+        const presentText = document.getElementById("presentText");
+
+        giftBox.addEventListener("click", () => {
+            giftBox.style.transform = "scale(0)";
+            giftBox.style.transition = "transform 0.7s ease-in-out";
+
+            setTimeout(() => {
+                presentReveal.style.display = "block";
+                presentReveal.style.opacity = 0;
+                presentReveal.style.transition = "opacity 1.5s ease-in-out";
+                presentReveal.style.opacity = 1;
+
+                setTimeout(() => {
+                    presentText.style.transition = "opacity 2s ease-in-out";
+                    presentText.style.opacity = 1;
+                }, 500);
+            }, 700);
+        });
+    </script>
+</body>
+</html>
