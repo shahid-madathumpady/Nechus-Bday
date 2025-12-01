@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Letter for My Sister 💌</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="page">
+
+    <!-- Animations -->
+    <div id="hearts"></div>
+    <div id="balloons"></div>
+    <div id="sparkles"></div>
+    <canvas id="fireworks"></canvas>
+
+    <h1 class="title">💌 A Special Letter for You, Nechu</h1>
+
+    <div class="letter-box" id="letterBox">
+        <p class="fade-text">Dear Fathima Neserin (my lovely Nechu)</p>
+
+        <p class="fade-text">You are not just my sister—you are a blessing, a light, a gift.<br>
+        You have the purest heart and the brightest smile.<br>
+        Anyone who has you in their life is truly lucky. 💖</p>
+
+        <p class="fade-text">I hope this birthday brings you joy, peace, success,<br>
+        and everything your heart dreams of.<br>
+        Always stay happy and strong. ✨</p>
+
+        <p class="fade-text">I am always here for you.<br>
+        With endless love,<br>
+        Your loving brother ❤️</p>
+
+        <p class="fade-text">27 vayyasuu ayyii ennu olla orma cennam ichirri budhii bodhmm okke vekkaam......... 😂😂</p>
+    </div>
+
+    <button class="next-btn" onclick="location.href='present.html'">Next ➜</button>
+
+    <script src="script.js"></script>
+    <script>
+        // Fade-in paragraphs one by one
+        const paragraphs = document.querySelectorAll(".fade-text");
+        let delay = 0;
+
+        paragraphs.forEach((p) => {
+            p.style.opacity = 0;
+            setTimeout(() => {
+                p.style.transition = "opacity 1.5s ease-in-out";
+                p.style.opacity = 1;
+            }, delay);
+            delay += 1200;
+        });
+    </script>
+</body>
+</html>
