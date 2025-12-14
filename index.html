@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blow the Candles 🎂</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="cake-page">
+
+    <div class="cake-container">
+        <img src="cake.gif" class="cake-img">
+
+        <div class="candle-text" id="candleText">🎂 Blow the candles, Anzziiii</div>
+
+        <div class="birthday-text" id="birthdayText">Happy 27th Birthday, Aacchhiiiii 💖</div>
+    </div>
+
+    <script>
+        // Show birthday text then redirect to birthday page
+        setTimeout(() => {
+            document.getElementById("candleText").style.opacity = "0";
+            document.getElementById("birthdayText").style.opacity = "1";
+        }, 1000);
+
+        setTimeout(() => {
+            window.location.href = "birthday.html";
+        }, 5000);
+    </script>
+    
+</body>
+</html>

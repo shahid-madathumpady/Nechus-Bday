@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Letter for My Sister 💌</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="page">
+
+    <!-- Animations -->
+    <div id="hearts"></div>
+    <div id="balloons"></div>
+    <div id="sparkles"></div>
+    <canvas id="fireworks"></canvas>
+
+    <h1 class="title">💌 A Special Letter for You, My Darling Sissss</h1>
+
+    <div class="letter-box" id="letterBox">
+        <p class="fade-text">Happy Birthday to my elder sister (yes, I said elder 😌) 🎂😂</p>
+
+        <p class="fade-text">First things first: I steal your things, you steal mine—so don’t act innocent. We’re equal criminals. Case closed 🤝😄<br>
+        Also, let’s stop pretending you’re always calm and gentle. Sometimes you’re super sweet, sometimes you’re extra harsh, and sometimes you shout first and ask questions later 😌. Sometimes you switch modes without warning 😌 and it deserves an award🏆.
+<br>
+        Even though you’re the elder one, you still come to me for advice… which honestly confuses me every single time. Please remember—you’re supposed to guide me, not the other way around 🤨😂
+We fight, we argue, we annoy each other, and somehow five minutes later we act like nothing happened. But jokes aside, you’re my personal ATM and my best friend… depending on the situation 😌.
+ 💖</p>
+
+        <p class="fade-text">’m really proud of you and super lucky to have you—even if you’re dramatic and scary sometimes 😜<br>
+        Happy Birthday, anzuuuuuu💋 🤍✨
+<br>
+        Always stay happy and strong. ✨</p>
+
+        <p class="fade-text">Love you always—now please stop shouting at me 🎉😂 and send me some money to celebrate your b'day😉..<br>
+        Your loving (and sometimes annoying) sis, <br>
+
+
+    </div>
+
+    <button class="next-btn" onclick="location.href='present.html'">Next ➜</button>
+
+    <script src="script.js"></script>
+    <script>
+        // Fade-in paragraphs one by one
+        const paragraphs = document.querySelectorAll(".fade-text");
+        let delay = 0;
+
+        paragraphs.forEach((p) => {
+            p.style.opacity = 0;
+            setTimeout(() => {
+                p.style.transition = "opacity 1.5s ease-in-out";
+                p.style.opacity = 1;
+            }, delay);
+            delay += 1200;
+        });
+    </script>
+    
+</body>
+</html>
